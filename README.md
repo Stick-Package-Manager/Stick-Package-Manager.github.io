@@ -1,1 +1,0 @@
-# Stick-Package-Manager.github.io
