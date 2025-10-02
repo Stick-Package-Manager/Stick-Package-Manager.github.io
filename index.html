@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Stick Package Manager</title>
+<link rel="icon" href="https://github.com/ihatemustard/stick/blob/assets/stick_logo.png?raw=true" type="image/png">
+<meta name="description" content="Stick is a minimal, fast, and open-source package manager for Arch Linux written in V that supports AUR packages and handles dependencies automatically.">
+<meta property="og:url" content="https://ihatemustard.github.io/stick/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stick Package Manager">
+<meta property="og:description" content="Stick is a minimal, fast, and open-source package manager for Arch Linux written in V that supports AUR packages and handles dependencies automatically.">
+<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/3bea8d10-4c58-48af-820b-8b5de4c7674d.png?token=KHWBj9SUXnORmzhW5oDTgH5iYrvtLBnMHlp8Xo4dV08&height=800&width=800&expires=33295417456">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="ihatemustard.github.io">
+<meta property="twitter:url" content="https://ihatemustard.github.io/stick/">
+<meta name="twitter:title" content="Stick Package Manager">
+<meta name="twitter:description" content="Stick is a minimal, fast, and open-source package manager for Arch Linux written in V that supports AUR packages and handles dependencies automatically.">
+<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/3bea8d10-4c58-48af-820b-8b5de4c7674d.png?token=KHWBj9SUXnORmzhW5oDTgH5iYrvtLBnMHlp8Xo4dV08&height=800&width=800&expires=33295417456">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css">
+  <style>
+    body {
+      background-color: #0d1117;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    .markdown-body {
+      max-width: 900px;
+      width: 100%;
+      background: #0d1117;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    a {
+      color: #58a6ff;
+    }
+    pre {
+      background-color: #161b22;
+    }
+  </style>
+</head>
+<body>
+  <article class="markdown-body" id="content">
+    Loading...
+  </article>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const url = 'https://raw.githubusercontent.com/Stick-Package-Manager/stick/refs/heads/main/README.md';
+
+    fetch(url)
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(err => {
+        document.getElementById('content').innerHTML = `<p style="color:red;">Failed to load: ${err}</p>`;
+      });
+  </script>
+</body>
+</html>
